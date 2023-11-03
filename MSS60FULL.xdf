@@ -1,4 +1,4 @@
-<!-- Written 11/03/2023 11:07:57 -->
+<!-- Written 11/03/2023 20:42:07 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -12,6 +12,8 @@
     <CATEGORY index="0x3" name="Lambda" />
     <CATEGORY index="0x4" name="DTC" />
     <CATEGORY index="0x5" name="Speed Limitation" />
+    <CATEGORY index="0x6" name="MomentManager" />
+    <CATEGORY index="0x7" name="Kh" />
   </XDFHEADER>
   <XDFTABLE uniqueid="0x5E6D" flags="0x0">
     <title>KL_N_BEGR_GANG - Rev limiter per gear</title>
@@ -366,6 +368,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x15B5" flags="0x0">
     <title>K_KH_N_MAX - COLD START</title>
+    <CATEGORYMEM index="0" category="8" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -400,7 +403,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1E58" flags="0x0">
-    <title>SPEED LIMIT 0xB0A0</title>
+    <title>KL_V_MAX_GANG_LIMOUSINE</title>
+    <description>Maximalgeschwindigkeit angehoben f. Limousine</description>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB090" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -439,7 +443,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x233D" flags="0x0">
-    <title>SPEED LIMIT 0xB0C2</title>
+    <title>KL_V_MAX_GANG_TOURING</title>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB0B2" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -478,7 +482,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x428A" flags="0x0">
-    <title>SPEED LIMIT 0xB0E4</title>
+    <title>KL_V_MAX_GANG_COUPE</title>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB0D4" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -517,7 +521,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x6107" flags="0x0">
-    <title>SPEED LIMIT 0xB106</title>
+    <title>KL_V_MAX_GANG_CABRIO</title>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB0F6" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -556,7 +560,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3588" flags="0x0">
-    <title>SPEED LIMIT 0xB128</title>
+    <title>KL_V_MAX_GANG_BEGRENZT</title>
     <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB118" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -597,6 +601,7 @@
   <XDFTABLE uniqueid="0x264F" flags="0x0">
     <title>KF_TZ_VL - Vollast Zuendwinkel</title>
     <description>Allumage &#129;Epleine charge</description>
+    <CATEGORYMEM index="0" category="2" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28E1E6" mmedelementsizebits="16" mmedcolcount="3" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>3</indexcount>
@@ -1535,8 +1540,9 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x75C3" flags="0x0">
-    <title>TABLE 18*12 0x286D8C INJECTION - KF_MD_IND_OPT</title>
-    <description>Temps optimal &#224; LA 1</description>
+    <title>KF_MD_IND_OPT</title>
+    <description>Temps optimal &#129;ELA 1</description>
+    <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x286D74" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -1567,43 +1573,6 @@
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X*0.1">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x9DB" flags="0x0">
-    <title>TABLE 18*12 0x27224 ALLUMAGE - KF_MD_ZW_OPT</title>
-    <description>Avance d&apos;allumage optimal</description>
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x28720C" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X*0.0001">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x2871E8" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>18</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x87224" mmedelementsizebits="16" mmedrowcount="18" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X/10">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
