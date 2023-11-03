@@ -1,53 +1,21 @@
-<!-- Written 11/02/2023 19:54:46 -->
+<!-- Written 11/03/2023 11:07:57 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
     <description></description>
     <BASEOFFSET offset="458752" subtract="0" />
-    <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="1" signed="0" lsbfirst="0" float="0" />
+    <DEFAULTS datasizeinbits="16" sigdigits="2" outputtype="1" signed="0" lsbfirst="0" float="0" />
     <REGION type="0xFFFFFFFF" startaddress="0x0" size="0x500000" regioncolor="0x0" regionflags="0x0" name="Binary File" desc="This region describes the bin file edited by this XDF" />
+    <CATEGORY index="0x0" name="RPM Limitation" />
+    <CATEGORY index="0x1" name="Ignition" />
+    <CATEGORY index="0x2" name="Fuel" />
+    <CATEGORY index="0x3" name="Lambda" />
+    <CATEGORY index="0x4" name="DTC" />
+    <CATEGORY index="0x5" name="Speed Limitation" />
   </XDFHEADER>
-  <XDFTABLE uniqueid="0x3B40" flags="0x0">
-    <title>RUPTEUR 0x189F4</title>
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x6052" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>2</indexcount>
-      <outputtype>4</outputtype>
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <LABEL index="0" value="COUPURE " />
-      <LABEL index="1" value="REPRISE" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="8" mmedminorstridebits="0" />
-      <indexcount>1</indexcount>
-      <decimalpl>1</decimalpl>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedaddress="0x189F4" mmedelementsizebits="16" mmedrowcount="1" mmedcolcount="2" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>2</outputtype>
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
   <XDFTABLE uniqueid="0x5E6D" flags="0x0">
     <title>KL_N_BEGR_GANG - Rev limiter per gear</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <units>RPM</units>
@@ -86,6 +54,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x31D" flags="0x0">
     <title>KL_N_BEGR_TOEL_KALT - N max tOil Cold</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x6088" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
@@ -128,6 +97,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1842" flags="0x0">
     <title>KL_N_BEGR_TOEL_HEISS - Nmax tOil hot</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x60A2" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
@@ -166,6 +136,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4A" flags="0x0">
     <title>KL_N_BEGR_TMOT_HEISS - Nmax tEng hot</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x60BC" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
@@ -204,7 +175,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3678" flags="0x0">
     <title>KL_N_BEGR_TGETR_HEISS - Nmax gear fluid hot</title>
-    <description>edit this parameter will result in failure&#013;&#010;engine stall</description>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x60F8" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -243,6 +214,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2A6B" flags="0x0">
     <title>KL_N_BEGR_SK</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
@@ -283,6 +255,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x485" flags="0x0">
     <title>Nmax -tEng cold ?</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x60D6" mmedelementsizebits="16" mmedcolcount="6" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>6</indexcount>
@@ -321,6 +294,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1FAC" flags="0x0">
     <title>Nmax - same value as target</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -356,6 +330,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x612D" flags="0x0">
     <title>K_N_BEGR_TI_MAX_E2? - target plus 300</title>
+    <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>1</indexcount>
@@ -426,6 +401,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1E58" flags="0x0">
     <title>SPEED LIMIT 0xB0A0</title>
+    <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB090" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -464,6 +440,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x233D" flags="0x0">
     <title>SPEED LIMIT 0xB0C2</title>
+    <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB0B2" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -502,6 +479,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x428A" flags="0x0">
     <title>SPEED LIMIT 0xB0E4</title>
+    <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB0D4" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -540,6 +518,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x6107" flags="0x0">
     <title>SPEED LIMIT 0xB106</title>
+    <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB0F6" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -578,6 +557,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3588" flags="0x0">
     <title>SPEED LIMIT 0xB128</title>
+    <CATEGORYMEM index="0" category="6" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xB118" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -610,6 +590,44 @@
       <max>255.000000</max>
       <outputtype>2</outputtype>
       <MATH equation="X/16">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x264F" flags="0x0">
+    <title>KF_TZ_VL - Vollast Zuendwinkel</title>
+    <description>Allumage &#129;Epleine charge</description>
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x28E1E6" mmedelementsizebits="16" mmedcolcount="3" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <indexcount>3</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>20</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.0625">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x28E1C2" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <indexcount>18</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>2</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x28E1EC" mmedelementsizebits="16" mmedrowcount="18" mmedcolcount="3" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>1</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X/10">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1854,44 +1872,6 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
-  <XDFTABLE uniqueid="0x5512" flags="0x0">
-    <title>TABLE 18*3 0x28E1EC ALLUMAGE PLEINE CHARGE - KF_TZ_VL</title>
-    <description>Allumage &#224; pleine charge</description>
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x28E1E6" mmedelementsizebits="16" mmedcolcount="3" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>3</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x28E1C2" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>18</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x28E1EC" mmedelementsizebits="16" mmedrowcount="18" mmedcolcount="3" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X/10">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
   <XDFTABLE uniqueid="0x5BD3" flags="0x0">
     <title>TABLE 18*3 0x28ED22 INJECTION PLEINE CHARGE</title>
     <XDFAXIS id="x" uniqueid="0x0">
@@ -2085,8 +2065,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4B81" flags="0x0">
     <title>DTC CODE 2710</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2134,8 +2115,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x643" flags="0x0">
     <title>DTC CODE 2711</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2183,8 +2165,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2CBD" flags="0x0">
     <title>DTC CODE 2712</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2232,8 +2215,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4E05" flags="0x0">
     <title>DTC CODE 2713</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2281,8 +2265,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x68EC" flags="0x0">
     <title>DTC CODE 2714</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2330,8 +2315,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x61AD" flags="0x0">
     <title>DTC CODE 2715</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2379,8 +2365,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x45C" flags="0x0">
     <title>DTC CODE 2716</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2428,8 +2415,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2B9F" flags="0x0">
     <title>DTC CODE 2717</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2477,8 +2465,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3068" flags="0x0">
     <title>DTC CODE 2718</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2526,8 +2515,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x32FF" flags="0x0">
     <title>DTC CODE 2719</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2575,8 +2565,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3530" flags="0x0">
     <title>DTC CODE 271A</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2624,8 +2615,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3793" flags="0x0">
     <title>DTC CODE 271B</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2673,8 +2665,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x39C5" flags="0x0">
     <title>DTC CODE 271C</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2722,8 +2715,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3BF6" flags="0x0">
     <title>DTC CODE 271D</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2771,8 +2765,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3DF4" flags="0x0">
     <title>DTC CODE 271E</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2820,8 +2815,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4025" flags="0x0">
     <title>DTC CODE 271F</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2869,8 +2865,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5B43" flags="0x0">
     <title>DTC CODE 2720</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2918,8 +2915,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x376E" flags="0x0">
     <title>DTC CODE CDB8</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -2967,8 +2965,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5DA9" flags="0x0">
     <title>DTC CODE 2722</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3016,8 +3015,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x600C" flags="0x0">
     <title>DTC CODE CDA7</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3065,8 +3065,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x6209" flags="0x0">
     <title>DTC CODE 2724</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3114,8 +3115,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x63D6" flags="0x0">
     <title>DTC CODE 2725</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3163,8 +3165,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x72C2" flags="0x0">
     <title>DTC CODE 2726</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3212,8 +3215,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7722" flags="0x0">
     <title>DTC CODE 2727</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3261,8 +3265,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7988" flags="0x0">
     <title>DTC CODE 2728</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3310,8 +3315,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7B86" flags="0x0">
     <title>DTC CODE 2729</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3359,8 +3365,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7D83" flags="0x0">
     <title>DTC CODE 272A</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3408,8 +3415,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7F1B" flags="0x0">
     <title>DTC CODE 272B</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3457,8 +3465,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x57C" flags="0x0">
     <title>DTC CODE 272C - DTC - POST CAT. O2</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3506,8 +3515,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x616" flags="0x0">
     <title>DTC CODE 272D - DTC - POST CAT. O2</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3555,8 +3565,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x6AF" flags="0x0">
     <title>DTC CODE CD87</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3604,8 +3615,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x714" flags="0x0">
     <title>DTC CODE CD98</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3653,8 +3665,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7AE" flags="0x0">
     <title>DTC CODE CDA5</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3702,8 +3715,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x813" flags="0x0">
     <title>DTC CODE CDBB</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3751,8 +3765,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x8AD" flags="0x0">
     <title>DTC CODE CD9C</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3800,8 +3815,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x946" flags="0x0">
     <title>DTC CODE CD94</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3849,8 +3865,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x9AB" flags="0x0">
     <title>DTC CODE CDA0</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3898,8 +3915,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xA45" flags="0x0">
     <title>DTC CODE CDA9</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3947,8 +3965,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xADE" flags="0x0">
     <title>DTC CODE CDA1</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -3996,8 +4015,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xB44" flags="0x0">
     <title>DTC CODE 2737</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4045,8 +4065,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xBDD" flags="0x0">
     <title>DTC CODE 2738</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4094,8 +4115,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xC46" flags="0x0">
     <title>DTC CODE 2739 - DTC - SAP</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4143,8 +4165,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xCDC" flags="0x0">
     <title>DTC CODE 273A</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4192,8 +4215,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xD75" flags="0x0">
     <title>DTC CODE 273B</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4241,8 +4265,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xDDE" flags="0x0">
     <title>DTC CODE 273C</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4290,8 +4315,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xE74" flags="0x0">
     <title>DTC CODE 273D</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4339,8 +4365,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xF0D" flags="0x0">
     <title>DTC CODE 273E</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4388,8 +4415,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0xF76" flags="0x0">
     <title>DTC CODE 273F</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4437,8 +4465,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x100C" flags="0x0">
     <title>DTC CODE 2740</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4486,8 +4515,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1075" flags="0x0">
     <title>DTC CODE 2741</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4535,8 +4565,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x110E" flags="0x0">
     <title>DTC CODE 2742</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4584,8 +4615,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x11A4" flags="0x0">
     <title>DTC CODE 2743</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4633,8 +4665,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x12A6" flags="0x0">
     <title>DTC CODE 27AF - DTC - SAP</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4682,8 +4715,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x130C" flags="0x0">
     <title>DTC CODE 27B0 - DTC - SAP</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4731,8 +4765,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x13A5" flags="0x0">
     <title>DTC CODE 27B1 - DTC - SAP</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4780,8 +4815,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x143F" flags="0x0">
     <title>DTC CODE 27B2 - DTC - SAP</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4829,8 +4865,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x14A4" flags="0x0">
     <title>DTC CODE 27C5 - DTC -SAP</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4878,8 +4915,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2AE9" flags="0x0">
     <title>DTC CODE 2789 - DTC - PRE CAT. O2</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4927,8 +4965,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x153D" flags="0x0">
     <title>DTC CODE 278A - DTC - PRE CAT. O2</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -4976,8 +5015,9 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1B6A" flags="0x0">
     <title>DTC CODE 271F</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAC2" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
       <outputtype>4</outputtype>
       <datatype>0</datatype>
@@ -5025,6 +5065,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x19A5" flags="0x0">
     <title>DTC CODE 27EE</title>
+    <CATEGORYMEM index="0" category="5" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedcolcount="13" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>13</indexcount>
