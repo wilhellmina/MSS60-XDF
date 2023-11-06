@@ -1,4 +1,4 @@
-<!-- Written 11/03/2023 20:42:07 -->
+<!-- Written 11/06/2023 21:16:22 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -14,6 +14,8 @@
     <CATEGORY index="0x5" name="Speed Limitation" />
     <CATEGORY index="0x6" name="MomentManager" />
     <CATEGORY index="0x7" name="Kh" />
+    <CATEGORY index="0x8" name="Knock Adaptation" />
+    <CATEGORY index="0x9" name="IPM" />
   </XDFHEADER>
   <XDFTABLE uniqueid="0x5E6D" flags="0x0">
     <title>KL_N_BEGR_GANG - Rev limiter per gear</title>
@@ -1465,7 +1467,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x63E5" flags="0x0">
-    <title>TABLE 18*12 0x283C50 - KF_KA_F</title>
+    <title> KF_KA_F</title>
+    <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x283C38" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -1502,8 +1505,9 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2B9C" flags="0x0">
-    <title>TABLE 18*12 0x283E3E - KF_KA_OFFS</title>
+    <title>KF_KA_OFFS</title>
     <description>KF_KA_OFFS</description>
+    <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x283E26" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -1578,8 +1582,9 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4BB3" flags="0x0">
-    <title>TABLE 18*12 0x287224 ALLUMAGE - KF_MD_ZW_OPT</title>
+    <title>KF_MD_ZW_OPT</title>
     <description>Avance d&apos;allumage optimal</description>
+    <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28720C" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -1615,8 +1620,9 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0xDA" flags="0x0">
-    <title>TABLE 18*12 0x2875A0 ALLUMAGE - KF_MD_POLYNOM_A</title>
-    <description>Polyn&#244;me &#224; param&#232;tre A pour l&apos;allumage</description>
+    <title> KF_MD_POLYNOM_A</title>
+    <description>Polyn&#244;me &#129;Eparam&#232;tre A pour l&apos;allumage</description>
+    <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x287588" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -1652,8 +1658,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2E19" flags="0x0">
-    <title>TABLE 18*12 0x28778E ALLUMAGE - KF_MD_POLYNOM_A_KH</title>
-    <description>Polyn&#244;me &#224; param&#232;tre A pour l&apos;allumage dans le KH  </description>
+    <title> KF_MD_POLYNOM_A_KH</title>
+    <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x287776" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
@@ -1915,7 +1921,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2724" flags="0x0">
-    <title>TABLE 12*10 0x2F8B90 - Dem. couple comfort - KF_MD_WUNSCH_REL_KOMFORT</title>
+    <title>KF_MD_WUNSCH_REL_KOMFORT</title>
+    <CATEGORYMEM index="0" category="10" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x288B7C" mmedelementsizebits="16" mmedcolcount="10" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <units>%</units>
@@ -1954,7 +1961,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4B2" flags="0x0">
-    <title>TABLE 12*10 0x2F8CAE - Dem. couple normal - KF_MD_WUNSCH_REL_NORMAL</title>
+    <title>KF_MD_WUNSCH_REL_NORMAL</title>
+    <CATEGORYMEM index="0" category="10" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x288C9A" mmedelementsizebits="16" mmedcolcount="10" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <units>%</units>
@@ -1993,7 +2001,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x25EC" flags="0x0">
-    <title>TABLE 12*10 0x2F8B90 - Dem. couple sport - KF_MD_WUNSCH_REL_SPORT</title>
+    <title>KF_MD_WUNSCH_REL_SPORT</title>
+    <CATEGORYMEM index="0" category="10" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x288DB8" mmedelementsizebits="16" mmedcolcount="10" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <units>%</units>
