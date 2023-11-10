@@ -1,4 +1,4 @@
-<!-- Written 11/06/2023 21:16:22 -->
+<!-- Written 11/10/2023 17:16:09 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -16,6 +16,8 @@
     <CATEGORY index="0x7" name="Kh" />
     <CATEGORY index="0x8" name="Knock Adaptation" />
     <CATEGORY index="0x9" name="IPM" />
+    <CATEGORY index="0xA" name="Lambda" />
+    <CATEGORY index="0xB" name="VANOS(WIP not sure which one is KH)" />
   </XDFHEADER>
   <XDFTABLE uniqueid="0x5E6D" flags="0x0">
     <title>KL_N_BEGR_GANG - Rev limiter per gear</title>
@@ -1281,154 +1283,6 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
-  <XDFTABLE uniqueid="0x3214" flags="0x0">
-    <title>TABLE 16*12 0xA62A - VANOS echappement</title>
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xA612" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X/100">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xA5F2" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>16</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0xA62A" mmedelementsizebits="16" mmedrowcount="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="(X/10)">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x77F8" flags="0x0">
-    <title>TABLE 16*12 0xA862 - VANOS ADMISSION</title>
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xA84A" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X/100">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xA82A" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>16</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0xA862" mmedelementsizebits="16" mmedrowcount="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X/10">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x15AA" flags="0x0">
-    <title>TABLE 16*12 0xAA1C - VANOS echapement heating</title>
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAA04" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X/100">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xA9E4" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>16</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0xAA1C" mmedelementsizebits="16" mmedrowcount="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X/10">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x3427" flags="0x0">
-    <title>TABLE 16*12 0xABD6 - VANOS ADMISSION HEATING</title>
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xABBE" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X/100">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0xAB9E" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>16</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0xABD6" mmedelementsizebits="16" mmedrowcount="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>1</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X/10">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
   <XDFTABLE uniqueid="0x59D5" flags="0x0">
     <title>TABLE 18*10 0x283AAA</title>
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1467,7 +1321,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x63E5" flags="0x0">
-    <title> KF_KA_F</title>
+    <title>KF_KA_F</title>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x283C38" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -1620,7 +1474,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0xDA" flags="0x0">
-    <title> KF_MD_POLYNOM_A</title>
+    <title>KF_MD_POLYNOM_A</title>
     <description>Polyn&#244;me &#129;Eparam&#232;tre A pour l&apos;allumage</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1658,7 +1512,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2E19" flags="0x0">
-    <title> KF_MD_POLYNOM_A_KH</title>
+    <title>KF_MD_POLYNOM_A_KH</title>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x287776" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -1880,6 +1734,118 @@
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x7D5C" flags="0x0">
+    <title>KL_LAM_SOLL_VL</title>
+    <CATEGORYMEM index="0" category="11" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x4D0A" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>8</indexcount>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount>
+      <outputtype>2</outputtype>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x4D1A" mmedelementsizebits="16" mmedrowcount="1" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+      <MATH row="1" equation="X*0.000061035156">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x1512" flags="0x0">
+    <title>KF_LAM_SOLL_GRUND_OPT</title>
+    <CATEGORYMEM index="0" category="11" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x4EBC" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x4ED4" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.0001">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0x4EEC" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.000061035156">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x608D" flags="0x0">
+    <title>KF_LAM_SOLL_GRUND</title>
+    <CATEGORYMEM index="0" category="11" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x500E" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>4</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x5026" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.0001">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0x503E" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.000061035156">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -5075,6 +5041,158 @@
       <max>255.000000</max>
       <outputtype>3</outputtype>
       <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x2F08" flags="0x0">
+    <title>KF_VAN_SOLL_E</title>
+    <CATEGORYMEM index="0" category="12" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xAB9E" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>16</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xABBE" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>1</datatype>
+      <unittype>67</unittype>
+      <DALINK index="0" />
+      <MATH equation="x/100">
+        <VAR id="x" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0xABD6" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.1">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x7758" flags="0x0">
+    <title>KF_VAN_SOLL_A</title>
+    <CATEGORYMEM index="0" category="12" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xA5F2" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>16</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xA612" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="x/100">
+        <VAR id="x" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0xA62A" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.1">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x4A33" flags="0x0">
+    <title>KF_VAN_SOLL_A KH</title>
+    <CATEGORYMEM index="0" category="12" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xA9E4" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>16</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xAA04" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="x/100">
+        <VAR id="x" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0xAA1C" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.1">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x54C3" flags="0x0">
+    <title>KF_VAN_SOLL_E KH</title>
+    <CATEGORYMEM index="0" category="12" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xA82A" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>16</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0xA84A" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="x/100">
+        <VAR id="x" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0xA862" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.1">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
