@@ -1,4 +1,4 @@
-<!-- Written 11/11/2023 13:16:12 -->
+<!-- Written 11/13/2023 15:07:26 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -17,10 +17,10 @@
     <CATEGORY index="0x8" name="Knock Adaptation" />
     <CATEGORY index="0x9" name="IPM" />
     <CATEGORY index="0xA" name="Lambda" />
-    <CATEGORY index="0xB" name="VANOS(WIP not sure which one is KH)" />
+    <CATEGORY index="0xB" name="VANOS" />
     <CATEGORY index="0xC" name="SAP" />
     <CATEGORY index="0xD" name="MomentManager E2" />
-    <CATEGORY index="0xE" name="Gear Detection" />
+    <CATEGORY index="0xE" name="GEAR" />
   </XDFHEADER>
   <XDFTABLE uniqueid="0x5E6D" flags="0x0">
     <title>KL_N_BEGR_GANG - Rev limiter per gear</title>
@@ -606,7 +606,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x264F" flags="0x0">
-    <title>KF_TZ_VL ?</title>
+    <title>KF_TZ_VL - Ignition Full Load</title>
     <description>Allumage &#129;Epleine charge</description>
     <CATEGORYMEM index="0" category="2" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1477,7 +1477,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0xDA" flags="0x0">
-    <title>KF_MD_POLYNOM_A</title>
+    <title>KF_MD_POLYNOM_A_KH</title>
     <description>Polyn&#244;me &#129;Eparam&#232;tre A pour l&apos;allumage</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -1515,7 +1515,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2E19" flags="0x0">
-    <title>KF_MD_POLYNOM_A_KH</title>
+    <title>KF_MD_POLYNOM_A</title>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x287776" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -5122,7 +5122,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2F08" flags="0x0">
-    <title>KF_VAN_SOLL_E</title>
+    <title>KF_VAN_SOLL_E_KH</title>
     <CATEGORYMEM index="0" category="12" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xAB9E" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5236,7 +5236,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x54C3" flags="0x0">
-    <title>KF_VAN_SOLL_E KH</title>
+    <title>KF_VAN_SOLL_E</title>
     <CATEGORYMEM index="0" category="12" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xA82A" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
