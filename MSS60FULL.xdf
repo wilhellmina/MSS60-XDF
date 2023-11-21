@@ -1,4 +1,4 @@
-<!-- Written 11/21/2023 13:14:31 -->
+<!-- Written 11/21/2023 17:15:30 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -1402,8 +1402,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x75C3" flags="0x0">
-    <title>KF_MD_IND_OPT</title>
-    <description>Temps optimal &#129;ELA 1</description>
+    <title>KF_MD_IND_OPT - Maximum actual torque normal operation</title>
+    <description>Temps optimal &#129;ELA 1&#013;&#010;&#013;&#010;maximales Istmoment unter Normbedingungen&#013;&#010;</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x286D74" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -1440,8 +1440,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4BB3" flags="0x0">
-    <title>KF_MD_ZW_OPT</title>
-    <description>Avance d&apos;allumage optimal</description>
+    <title>KF_MD_ZW_OPT - Optimal ignition angle</title>
+    <description>Optimaler Zundwinkel</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28720C" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -1473,82 +1473,6 @@
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X/10">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0xDA" flags="0x0">
-    <title>KF_MD_POLYNOM_A_KH</title>
-    <description>Polyn&#244;me &#129;Eparam&#232;tre A pour l&apos;allumage</description>
-    <CATEGORYMEM index="0" category="7" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x287588" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X*0.0001">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x287564" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>18</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x2875A0" mmedelementsizebits="16" mmedrowcount="18" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X/100">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
-  <XDFTABLE uniqueid="0x2E19" flags="0x0">
-    <title>KF_MD_POLYNOM_A</title>
-    <CATEGORYMEM index="0" category="7" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x287776" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X/1000">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x287752" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>18</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>2</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x28778E" mmedelementsizebits="16" mmedrowcount="18" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X/100">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1889,8 +1813,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x13C" flags="0x0">
-    <title>KF_MD_POLYNOM_A_KH (WIP)</title>
-    <description>optimales Moment bei LA 1</description>
+    <title>KF_MD_POLYNOM_A_KH - polyfndasjbjlhfdasbkhjfdas ignition for kh</title>
+    <description>Parameter f. quadratischen Term der Zundhakenparabel =f(n,wi)</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x287564" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1927,7 +1851,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5A01" flags="0x0">
-    <title>KF_MD_POLYNOM_A (WIP)</title>
+    <title>KF_MD_POLYNOM_A -  polynomial for ignition hook calculation????</title>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x287776" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1964,7 +1888,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2724" flags="0x0">
-    <title>KF_MD_WUNSCH_REL_KOMFORT</title>
+    <title>KF_MD_WUNSCH_REL_KOMFORT - Desired output torque comfort</title>
     <CATEGORYMEM index="0" category="10" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x288B7C" mmedelementsizebits="16" mmedcolcount="10" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -2004,7 +1928,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4B2" flags="0x0">
-    <title>KF_MD_WUNSCH_REL_NORMAL</title>
+    <title>KF_MD_WUNSCH_REL_NORMAL - Desired output torque normal</title>
     <CATEGORYMEM index="0" category="10" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x288C9A" mmedelementsizebits="16" mmedcolcount="10" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -2044,7 +1968,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x25EC" flags="0x0">
-    <title>KF_MD_WUNSCH_REL_SPORT</title>
+    <title>KF_MD_WUNSCH_REL_SPORT - Desired output torque sport</title>
     <CATEGORYMEM index="0" category="10" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x288DB8" mmedelementsizebits="16" mmedcolcount="10" mmedmajorstridebits="16" mmedminorstridebits="0" />
