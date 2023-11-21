@@ -1,4 +1,4 @@
-<!-- Written 11/21/2023 03:29:17 -->
+<!-- Written 11/21/2023 13:14:31 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -375,7 +375,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x15B5" flags="0x0">
-    <title>K_KH_N_MAX - COLD START</title>
+    <title>K_KH_N_MAX - Warumup operation RPM threthold</title>
     <CATEGORYMEM index="0" category="8" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -607,7 +607,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x37E9" flags="0x0">
-    <title>KF_TZ_VL - Ignition full load</title>
+    <title>KF_TZ_VL - Full Load Ignition Angle</title>
     <CATEGORYMEM index="0" category="2" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28E1C2" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1140,8 +1140,8 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7A6" flags="0x0">
-    <title>KF_LAM_SOLL_WL</title>
-    <CATEGORYMEM index="0" category="4" />
+    <title>KF_LAM_SOLL_WL - TARGET lambda warm-up mode</title>
+    <CATEGORYMEM index="0" category="11" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x4DE4" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>8</indexcount>
@@ -1741,7 +1741,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7D5C" flags="0x0">
-    <title>KL_LAM_SOLL_VL</title>
+    <title>KL_LAM_SOLL_VL - TARGET lambda full load</title>
     <CATEGORYMEM index="0" category="11" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x4D0A" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1781,7 +1781,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x1512" flags="0x0">
-    <title>KF_LAM_SOLL_GRUND_OPT</title>
+    <title>KF_LAM_SOLL_GRUND_PST - TARGET lambda normal operation PST</title>
     <CATEGORYMEM index="0" category="11" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x4EBC" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -1817,7 +1817,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x608D" flags="0x0">
-    <title>KF_LAM_SOLL_GRUND</title>
+    <title>KF_LAM_SOLL_GRUND - TARGET lambda normal operation</title>
     <CATEGORYMEM index="0" category="11" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x500E" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5223,7 +5223,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2F08" flags="0x0">
-    <title>KF_VAN_SOLL_E_KH</title>
+    <title>KF_VAN_KH_SOLL_E- VANOS angle Exhaust Warmup operation</title>
     <CATEGORYMEM index="0" category="12" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xAB9E" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5261,7 +5261,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x7758" flags="0x0">
-    <title>KF_VAN_SOLL_A</title>
+    <title>KF_VAN_SOLL_A - VANOS angle Intake</title>
     <CATEGORYMEM index="0" category="12" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xA5F2" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5299,7 +5299,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x4A33" flags="0x0">
-    <title>KF_VAN_SOLL_A KH</title>
+    <title>KF_VAN_KH_SOLL_A - VANOS angle Intake Warmup operation</title>
     <CATEGORYMEM index="0" category="12" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xA9E4" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5337,7 +5337,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x54C3" flags="0x0">
-    <title>KF_VAN_SOLL_E</title>
+    <title>KF_VAN_SOLL_E - VANOS angle Exhaust</title>
     <CATEGORYMEM index="0" category="12" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0xA82A" mmedelementsizebits="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5526,6 +5526,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x35E" flags="0x0">
     <title>KF_MD_ZW_OPT_E2</title>
+    <CATEGORYMEM index="0" category="14" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28E976" mmedelementsizebits="16" mmedcolcount="10" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>10</indexcount>
@@ -5561,7 +5562,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3BC5" flags="0x0">
-    <title>K_GANG_I_HA_HS</title>
+    <title>K_GANG_I_HA_HS - Final drive Ratio MT</title>
     <CATEGORYMEM index="0" category="15" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -5597,7 +5598,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x19B2" flags="0x0">
-    <title>K_GANG_I_HA_DKG</title>
+    <title>K_GANG_I_HA_DKG - Final drive Ratio DCT</title>
     <CATEGORYMEM index="0" category="15" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
@@ -5669,7 +5670,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x3FFA" flags="0x0">
-    <title>KF_TZ_GRUND ?</title>
+    <title>KF_TZ_GRUND - Basic Ignition Angle</title>
     <CATEGORYMEM index="0" category="2" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28E25A" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5706,7 +5707,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x73B2" flags="0x0">
-    <title>KF_TZ_MIN ? 1</title>
+    <title>KF_TZ_MIN ? 1 - latest permissible ignition angle</title>
     <CATEGORYMEM index="0" category="2" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28E0C0" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -5744,7 +5745,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x79EE" flags="0x0">
-    <title>KF_TZ_MIN ? 2</title>
+    <title>KF_TZ_MIN ? 2 - latest permissible ignition angle</title>
     <CATEGORYMEM index="0" category="2" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x28E042" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
