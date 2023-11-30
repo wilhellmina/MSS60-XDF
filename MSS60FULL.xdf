@@ -1,4 +1,4 @@
-<!-- Written 11/28/2023 22:42:00 -->
+<!-- Written 11/30/2023 11:17:39 -->
 <XDFFORMAT version="1.70">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -223,7 +223,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2A6B" flags="0x0">
-    <title>KL_N_BEGR_SK</title>
+    <title>KL_N_BEGR_SK - Rev limit Emergency mode 1-4</title>
     <CATEGORYMEM index="0" category="1" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
