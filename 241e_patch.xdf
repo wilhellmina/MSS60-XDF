@@ -1,5 +1,5 @@
-<!-- Written 11/29/2023 18:33:24 -->
-<XDFFORMAT version="1.70">
+<!-- Written 01/11/2024 14:55:20 -->
+<XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
     <description></description>
@@ -11,5 +11,9 @@
     <title>EWS / Immo Patch</title>
     <description>Apply to delete EWS / Immo</description>
     <XDFPATCHENTRY name="EWS / Immo" address="0x65387" datasize="0x1" patchdata="01" basedata="03" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x4F19">
+    <title>OBD Read Protect</title>
+    <XDFPATCHENTRY name="OBD" address="0x12A70" datasize="0x4" patchdata="60000000" basedata="40810020" />
   </XDFPATCH>
 </XDFFORMAT>
