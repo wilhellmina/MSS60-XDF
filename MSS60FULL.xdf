@@ -1,4 +1,4 @@
-<!-- Written 12/20/2023 15:23:14 -->
+<!-- Written 02/02/2024 16:39:39 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -24,6 +24,44 @@
     <CATEGORY index="0xF" name="Idle Control" />
     <CATEGORY index="0x10" name="Egas" />
   </XDFHEADER>
+  <XDFTABLE uniqueid="0x1930" flags="0x0">
+    <title>KL_MD_RF_MAX_ROH</title>
+    <description>maximale rel. Fullung</description>
+    <CATEGORYMEM index="0" category="3" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x286AC6" mmedelementsizebits="16" mmedcolcount="20" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>20</indexcount>
+      <outputtype>2</outputtype>
+      <embedinfo type="1" />
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount>
+      <datatype>0</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <LABEL index="0" value="0.00" />
+      <MATH equation="X">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedaddress="0x286AEE" mmedelementsizebits="16" mmedrowcount="1" mmedcolcount="20" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>3</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="14.7/(X*0.0001)">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
   <XDFTABLE uniqueid="0x5A22" flags="0x0">
     <title>KF_MD_FAHRER_1_?</title>
     <CATEGORYMEM index="0" category="7" />
@@ -1425,7 +1463,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X*0.000061035156">
+      <MATH equation="14.7/(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1950,10 +1988,10 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
+      <MATH equation="X ">
         <VAR id="X" />
       </MATH>
-      <MATH row="1" equation="X*0.000061035156">
+      <MATH row="1" equation="14.7/(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1989,7 +2027,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X*0.000061035156">
+      <MATH equation="14.7/(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -2025,7 +2063,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X*0.000061035156">
+      <MATH equation="14.7/(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -5841,44 +5879,6 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
-  <XDFTABLE uniqueid="0x1930" flags="0x0">
-    <title>KL_MD_RF_MAX_ROH</title>
-    <description>maximale rel. Fullung</description>
-    <CATEGORYMEM index="0" category="7" />
-    <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x286AC6" mmedelementsizebits="16" mmedcolcount="20" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <indexcount>20</indexcount>
-      <outputtype>2</outputtype>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
-      <indexcount>1</indexcount>
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <LABEL index="0" value="0.00" />
-      <MATH equation="X">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedaddress="0x286AEE" mmedelementsizebits="16" mmedrowcount="1" mmedcolcount="20" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>3</decimalpl>
-      <min>0.000000</min>
-      <max>255.000000</max>
-      <outputtype>1</outputtype>
-      <MATH equation="X*0.0001">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-  </XDFTABLE>
   <XDFTABLE uniqueid="0x106F" flags="0x0">
     <title>KF_MD_IND_OPT_E2</title>
     <CATEGORYMEM index="0" category="14" />
@@ -5947,7 +5947,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X*0.0001">
+      <MATH equation="14.7/(X*0.0001)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
