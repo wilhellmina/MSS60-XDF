@@ -1,4 +1,4 @@
-<!-- Written 02/02/2024 16:39:39 -->
+<!-- Written 04/08/2024 04:14:39 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -1463,7 +1463,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="14.7/(X*0.000061035156)">
+      <MATH equation="14.7*(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1991,7 +1991,7 @@
       <MATH equation="X ">
         <VAR id="X" />
       </MATH>
-      <MATH row="1" equation="14.7/(X*0.000061035156)">
+      <MATH row="1" equation="14.7*(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -2027,7 +2027,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="14.7/(X*0.000061035156)">
+      <MATH equation="14.7*(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -2063,7 +2063,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="14.7/(X*0.000061035156)">
+      <MATH equation="14.7*(X*0.000061035156)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -2105,7 +2105,7 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x13C" flags="0x0">
-    <title>KF_MD_POLYNOM_A_KH - polyfndasjbjlhfdasbkhjfdas ignition for kh</title>
+    <title>KF_MD_POLYNOM_A_KH</title>
     <description>Parameter f. quadratischen Term der Zundhakenparabel =f(n,wi)</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
@@ -5755,7 +5755,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0xA62A" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -5831,7 +5831,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0xA862" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>0</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
@@ -6328,7 +6328,7 @@
       <decimalpl>1</decimalpl>
       <embedinfo type="1" />
       <datatype>0</datatype>
-      <unittype>0</unittype>
+      <unittype>85</unittype>
       <DALINK index="0" />
       <MATH equation="X*0.1">
         <VAR id="X" />
@@ -6352,7 +6352,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="X">
+      <MATH equation="X*0.001">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
