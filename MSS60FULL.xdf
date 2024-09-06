@@ -1,4 +1,4 @@
-<!-- Written 07/10/2024 18:39:01 -->
+<!-- Written 09/06/2024 03:50:20 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -1695,33 +1695,32 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x75C3" flags="0x0">
     <title>KF_MD_IND_OPT - Maximum actual torque normal operation</title>
-    <description>Temps optimal &#129;ELA 1&#013;&#010;&#013;&#010;maximales Istmoment unter Normbedingungen&#013;&#010;</description>
+    <description>Temps optimal &#129;ELA 1&#013;&#010;&#013;&#010;maximales Istmoment unter Normbedingungen</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x286D74" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
-      <indexcount>12</indexcount>
-      <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
-      <DALINK index="0" />
-      <MATH equation="X*0.0001">
-        <VAR id="X" />
-      </MATH>
-    </XDFAXIS>
-    <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x286D50" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="16" mmedminorstridebits="0" />
       <indexcount>18</indexcount>
-      <outputtype>2</outputtype>
       <embedinfo type="1" />
-      <datatype>2</datatype>
+      <datatype>0</datatype>
       <unittype>0</unittype>
       <DALINK index="0" />
       <MATH equation="X">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x286D74" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
+      <indexcount>12</indexcount>
+      <embedinfo type="1" />
+      <datatype>2</datatype>
+      <unittype>0</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.0001">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
     <XDFAXIS id="z">
-      <EMBEDDEDDATA mmedtypeflags="0x01" mmedaddress="0x286D8C" mmedelementsizebits="16" mmedrowcount="18" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedtypeflags="0x05" mmedaddress="0x286D8C" mmedelementsizebits="16" mmedrowcount="12" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <decimalpl>1</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
@@ -2143,10 +2142,10 @@
     </XDFAXIS>
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5A01" flags="0x0">
-    <title>KF_MD_POLYNOM_A -  polynomial for ignition hook calculation????</title>
+    <title>KF_MD_POLYNOM_A</title>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x287776" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x287752" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>18</indexcount>
       <outputtype>2</outputtype>
       <embedinfo type="1" />
@@ -2158,7 +2157,7 @@
       </MATH>
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
-      <EMBEDDEDDATA mmedaddress="0x287752" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <EMBEDDEDDATA mmedaddress="0x287776" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>12</indexcount>
       <embedinfo type="1" />
       <datatype>0</datatype>
@@ -5906,7 +5905,7 @@
     </XDFAXIS>
     <XDFAXIS id="z">
       <EMBEDDEDDATA mmedtypeflags="0x05" mmedaddress="0x28E7F6" mmedelementsizebits="16" mmedrowcount="10" mmedcolcount="10" mmedmajorstridebits="0" mmedminorstridebits="0" />
-      <decimalpl>2</decimalpl>
+      <decimalpl>1</decimalpl>
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
