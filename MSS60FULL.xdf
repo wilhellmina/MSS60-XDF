@@ -1,4 +1,4 @@
-<!-- Written 09/06/2024 03:50:20 -->
+<!-- Written 09/09/2024 03:34:42 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -2143,6 +2143,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5A01" flags="0x0">
     <title>KF_MD_POLYNOM_A</title>
+    <description>used for tz_ve</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x287752" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -6465,4 +6466,16 @@
       </MATH>
     </XDFAXIS>
   </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x5F8F">
+    <title>K_MD_KKOS_N_MAX</title>
+    <EMBEDDEDDATA mmedaddress="0x287C1A" mmedelementsizebits="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>&quot;Upm&quot;</units>
+    <outputtype>2</outputtype>
+    <datatype>6</datatype>
+    <unittype>4</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
 </XDFFORMAT>
