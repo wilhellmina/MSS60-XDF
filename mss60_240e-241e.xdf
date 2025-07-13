@@ -1,4 +1,4 @@
-<!-- Written 07/12/2025 21:20:16 -->
+<!-- Written 07/13/2025 17:37:04 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -6439,8 +6439,8 @@
       <EMBEDDEDDATA mmedaddress="0x7953E" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>5</indexcount>
       <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
+      <datatype>66</datatype>
+      <unittype>32</unittype>
       <DALINK index="0" />
       <MATH equation="X*0.1">
         <VAR id="X" />
@@ -6448,10 +6448,11 @@
     </XDFAXIS>
     <XDFAXIS id="y" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x79548" mmedelementsizebits="16" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>bar</units>
       <indexcount>8</indexcount>
       <embedinfo type="1" />
-      <datatype>0</datatype>
-      <unittype>0</unittype>
+      <datatype>68</datatype>
+      <unittype>19</unittype>
       <DALINK index="0" />
       <MATH equation="X*0.001">
         <VAR id="X" />
@@ -6601,6 +6602,7 @@
   <XDFTABLE uniqueid="0x425C" flags="0x0">
     <title>KL_GANG_I_HS - Gear Ratio M/T</title>
     <description>6,5,4,3,2,1,R</description>
+    <CATEGORYMEM index="0" category="15" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedelementsizebits="16" mmedmajorstridebits="-32" mmedminorstridebits="0" />
       <indexcount>7</indexcount>
@@ -6636,6 +6638,42 @@
       <max>255.000000</max>
       <outputtype>1</outputtype>
       <MATH equation="X*0.0009765625">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x4766" flags="0x0">
+    <title>KF_TZ_I_SZ - ignition coil dwell time</title>
+    <CATEGORYMEM index="0" category="2" />
+    <XDFAXIS id="x" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x2FDE5A" mmedelementsizebits="16" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>5</indexcount>
+      <embedinfo type="1" />
+      <datatype>66</datatype>
+      <unittype>40</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.001">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0">
+      <EMBEDDEDDATA mmedaddress="0x2FDE64" mmedelementsizebits="16" mmedcolcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <indexcount>7</indexcount>
+      <embedinfo type="1" />
+      <datatype>66</datatype>
+      <unittype>32</unittype>
+      <DALINK index="0" />
+      <MATH equation="X*0.1">
+        <VAR id="X" />
+      </MATH>
+    </XDFAXIS>
+    <XDFAXIS id="z">
+      <EMBEDDEDDATA mmedtypeflags="0x04" mmedaddress="0x2FDE72" mmedelementsizebits="16" mmedrowcount="7" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl>
+      <min>0.000000</min>
+      <max>255.000000</max>
+      <outputtype>1</outputtype>
+      <MATH equation="X*0.0008">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
