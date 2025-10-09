@@ -1,4 +1,4 @@
-<!-- Written 07/13/2025 17:37:04 -->
+<!-- Written 10/09/2025 17:58:19 -->
 <XDFFORMAT version="1.80">
   <XDFHEADER>
     <flags>0x1</flags>
@@ -28,7 +28,7 @@
   <XDFTABLE uniqueid="0x1930" flags="0x0">
     <title>KL_MD_RF_MAX_ROH</title>
     <description>maximale rel. Fullung</description>
-    <CATEGORYMEM index="0" category="3" />
+    <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x2F6AC6" mmedelementsizebits="16" mmedcolcount="20" mmedmajorstridebits="0" mmedminorstridebits="0" />
       <indexcount>20</indexcount>
@@ -58,7 +58,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="14.7/(X*0.0001)">
+      <MATH equation="(X*0.0001)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
@@ -1642,6 +1642,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x63E5" flags="0x0">
     <title>KF_KA_F</title>
+    <description>Korrekturwert vom Gewichtungsfaktor.</description>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x2F3C38" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -1680,7 +1681,7 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x2B9C" flags="0x0">
     <title>KF_KA_OFFS</title>
-    <description>KF_KA_OFFS</description>
+    <description>Abstand Klopfgrenze</description>
     <CATEGORYMEM index="0" category="9" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x2F3E26" mmedelementsizebits="16" mmedcolcount="12" mmedmajorstridebits="16" mmedminorstridebits="0" />
@@ -2167,7 +2168,6 @@
   </XDFTABLE>
   <XDFTABLE uniqueid="0x5A01" flags="0x0">
     <title>KF_MD_POLYNOM_A</title>
-    <description>used for tz_ve</description>
     <CATEGORYMEM index="0" category="7" />
     <XDFAXIS id="x" uniqueid="0x0">
       <EMBEDDEDDATA mmedaddress="0x2F7752" mmedelementsizebits="16" mmedcolcount="18" mmedmajorstridebits="0" mmedminorstridebits="0" />
@@ -6021,7 +6021,7 @@
       <min>0.000000</min>
       <max>255.000000</max>
       <outputtype>1</outputtype>
-      <MATH equation="14.7/(X*0.0001)">
+      <MATH equation="(X*0.0001)">
         <VAR id="X" />
       </MATH>
     </XDFAXIS>
